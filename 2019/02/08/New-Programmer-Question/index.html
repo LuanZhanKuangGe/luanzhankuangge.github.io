@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=6.7.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.7.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.jpg?v=6.7.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-32x32-next.jpg?v=6.7.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.7.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '6.7.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="写在最前的自我介绍: 什么是程序员之乱？  如果你想更好的使用本站，建议你先读下这篇文章： 问答的艺术，如何提出问题和选择答案？  直接阅读提问的智慧吧。    分享一下网站和资料： 本站的友情链接和推荐网站,持续更新中… github上的免费编程书计划…  职业介绍篇： 程序员职业优缺点？ 程序员是不是青春饭？(程序员30/35/40岁是不是就得转行?) 程序员的收入咋样？  自从CSDN废了">
+<meta name="keywords" content="Question,CoderLuan">
+<meta property="og:type" content="article">
+<meta property="og:title" content="程序员入门问题整理">
+<meta property="og:url" content="https://luanzhankuangge.github.io/2019/02/08/New-Programmer-Question/index.html">
+<meta property="og:site_name" content="程序员之乱">
+<meta property="og:description" content="写在最前的自我介绍: 什么是程序员之乱？  如果你想更好的使用本站，建议你先读下这篇文章： 问答的艺术，如何提出问题和选择答案？  直接阅读提问的智慧吧。    分享一下网站和资料： 本站的友情链接和推荐网站,持续更新中… github上的免费编程书计划…  职业介绍篇： 程序员职业优缺点？ 程序员是不是青春饭？(程序员30/35/40岁是不是就得转行?) 程序员的收入咋样？  自从CSDN废了">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-02-08T12:55:52.351Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="程序员入门问题整理">
+<meta name="twitter:description" content="写在最前的自我介绍: 什么是程序员之乱？  如果你想更好的使用本站，建议你先读下这篇文章： 问答的艺术，如何提出问题和选择答案？  直接阅读提问的智慧吧。    分享一下网站和资料： 本站的友情链接和推荐网站,持续更新中… github上的免费编程书计划…  职业介绍篇： 程序员职业优缺点？ 程序员是不是青春饭？(程序员30/35/40岁是不是就得转行?) 程序员的收入咋样？  自从CSDN废了">
+
+
+
+
+
+
+  <link rel="canonical" href="https://luanzhankuangge.github.io/2019/02/08/New-Programmer-Question/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>程序员入门问题整理 | 程序员之乱</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">程序员之乱</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">程序员那些乱七八糟的事ʅ(‾◡◝)ʃ</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://luanzhankuangge.github.io/2019/02/08/New-Programmer-Question/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="coderluan">
+      <meta itemprop="description" content="程序员那些乱七八糟的事ʅ(‾◡◝)ʃ">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="程序员之乱">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">程序员入门问题整理
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-02-08 12:40:21 / 修改时间：20:55:52" itemprop="dateCreated datePublished" datetime="2019-02-08T12:40:21+08:00">2019-02-08</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/旧站整理/" itemprop="url" rel="index"><span itemprop="name">旧站整理</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <hr>
+<h4 id="写在最前的自我介绍"><a href="#写在最前的自我介绍" class="headerlink" title="写在最前的自我介绍:"></a>写在最前的自我介绍:</h4><ul>
+<li><a href="/About-Coderluan/">什么是程序员之乱？</a></li>
+</ul>
+<h4 id="如果你想更好的使用本站，建议你先读下这篇文章："><a href="#如果你想更好的使用本站，建议你先读下这篇文章：" class="headerlink" title="如果你想更好的使用本站，建议你先读下这篇文章："></a>如果你想更好的使用本站，建议你先读下这篇文章：</h4><ul>
+<li><p><del>问答的艺术，如何提出问题和选择答案？</del></p>
+<ul>
+<li>直接阅读<a href="https://github.com/FredWe/How-To-Ask-Questions-The-Smart-Way/blob/master/README-zh_CN.md" target="_blank" rel="noopener">提问的智慧</a>吧。</li>
+</ul>
+</li>
+</ul>
+<h4 id="分享一下网站和资料："><a href="#分享一下网站和资料：" class="headerlink" title="分享一下网站和资料："></a>分享一下网站和资料：</h4><ul>
+<li><del>本站的友情链接和推荐网站,持续更新中…</del></li>
+<li><del>github上的免费编程书计划…</del></li>
+</ul>
+<h4 id="职业介绍篇："><a href="#职业介绍篇：" class="headerlink" title="职业介绍篇："></a>职业介绍篇：</h4><ul>
+<li>程序员职业优缺点？</li>
+<li>程序员是不是青春饭？(程序员30/35/40岁是不是就得转行?)</li>
+<li><p><del>程序员的收入咋样？</del></p>
+<ul>
+<li>自从CSDN废了，基本没有合理切符合国情的统计数据，有兴趣的自己上招牌网站搜搜吧。</li>
+</ul>
+</li>
+<li><p>程序员的身体咋样？（程序员的职业病与预防？）</p>
+</li>
+<li>程序员？码农？屌丝？</li>
+</ul>
+<h4 id="解忧篇："><a href="#解忧篇：" class="headerlink" title="解忧篇："></a>解忧篇：</h4><ul>
+<li>英语不好能不能当程序员？(程序员需要什么程度的英语?)</li>
+<li>数学不好能不能当程序员？(程序员需要什么程度的数学?)</li>
+<li>没学历能不能当程序员？(不同学历对程序员的影响?)</li>
+<li>专业不对口能不能当程序员？</li>
+<li>女生能不能当程序员？(为什么常说女生不适合当程序员?)</li>
+<li>年纪太小能不能当程序员？(不读高中/大学，去学编程怎么样?)</li>
+<li>年纪大了能不能当程序员？</li>
+<li>身体不好能不能当程序员？(常见病是否影响当程序员?)</li>
+<li>没天赋能不能当程序员？(为什么我的学习效果不好？)</li>
+</ul>
+<h4 id="入门篇："><a href="#入门篇：" class="headerlink" title="入门篇："></a>入门篇：</h4><ul>
+<li>学习路线的选择？(程序员应该如何入门?)</li>
+<li>编程语言的选择？</li>
+<li>编程设备的选择？</li>
+</ul>
+<h4 id="校园篇："><a href="#校园篇：" class="headerlink" title="校园篇："></a>校园篇：</h4><ul>
+<li>当程序员应该选择什么学校？</li>
+<li>当程序员应该选择什么专业？</li>
+<li>当程序员应该提前学什么？</li>
+<li>当程序员是否需要考研？(研究生学历和3年经验哪个更有用？)</li>
+<li>没学历是不是永远进不了大公司？</li>
+</ul>
+<h4 id="培训篇："><a href="#培训篇：" class="headerlink" title="培训篇："></a>培训篇：</h4><ul>
+<li>当程序员是否需要培训？(培训班到底有什么价值?)</li>
+<li>如何选择培训班？</li>
+<li>培训的常见“骗局”？</li>
+</ul>
+<h4 id="就职篇："><a href="#就职篇：" class="headerlink" title="就职篇："></a>就职篇：</h4><ul>
+<li>程序员如何找实习？</li>
+<li>程序员如何找工作？</li>
+<li>程序员如何写简历?</li>
+<li>程序员如何笔试/面试？</li>
+<li>程序员如何选择公司？(程序员如何选择offer？判断offer的标准？)</li>
+<li>程序员需要考证吗？(哪些证对程序员有帮助？)</li>
+</ul>
+<p>从业篇：</p>
+<ul>
+<li>程序员的税和五险一金？（TODO）</li>
+<li>程序员的发展路线？</li>
+<li>程序员如何坚持学习？</li>
+<li>拒绝offer/提加薪/离职，如果心里有愧（不好意思）怎么办？</li>
+<li>不喜欢干程序员怎么办？（对编程没兴趣怎么办？）</li>
+<li>工作不开心怎么办？</li>
+<li>程序员如何创业？</li>
+<li>如何寻找程序员创业伙伴？</li>
+</ul>
+<p>杂谈篇：</p>
+<ul>
+<li>怎么找一个程序员师傅？</li>
+<li>程序员怎么找女朋友？（程序员为什么没女朋友？）</li>
+<li>程序员喜欢什么样的礼物？</li>
+<li>各种各样的修电脑问题？</li>
+<li>为什么我反对中文编程语言？</li>
+<li>选择大城市还是小城市？</li>
+</ul>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Question/" rel="tag"># Question</a>
+          
+            <a href="/tags/CoderLuan/" rel="tag"># CoderLuan</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/02/01/RasPi-Lakka-Tutorial/" rel="next" title="树莓派 + Lakka 打造复古游戏机">
+                <i class="fa fa-chevron-left"></i> 树莓派 + Lakka 打造复古游戏机
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/02/08/About-CoderLuan/" rel="prev" title="什么是程序员之乱？">
+                什么是程序员之乱？ <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">coderluan</p>
+              <p class="site-description motion-element" itemprop="description">程序员那些乱七八糟的事ʅ(‾◡◝)ʃ</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives">
+                
+                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/LuanZhanKuangGe" title="GitHub &rarr; https://github.com/LuanZhanKuangGe" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#写在最前的自我介绍"><span class="nav-number">1.</span> <span class="nav-text">写在最前的自我介绍:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如果你想更好的使用本站，建议你先读下这篇文章："><span class="nav-number">2.</span> <span class="nav-text">如果你想更好的使用本站，建议你先读下这篇文章：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分享一下网站和资料："><span class="nav-number">3.</span> <span class="nav-text">分享一下网站和资料：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#职业介绍篇："><span class="nav-number">4.</span> <span class="nav-text">职业介绍篇：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解忧篇："><span class="nav-number">5.</span> <span class="nav-text">解忧篇：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#入门篇："><span class="nav-number">6.</span> <span class="nav-text">入门篇：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#校园篇："><span class="nav-number">7.</span> <span class="nav-text">校园篇：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#培训篇："><span class="nav-number">8.</span> <span class="nav-text">培训篇：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#就职篇："><span class="nav-number">9.</span> <span class="nav-text">就职篇：</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">coderluan</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v6.7.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=6.7.0"></script>
+
+  <script src="/js/src/motion.js?v=6.7.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=6.7.0"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=6.7.0"></script>
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=6.7.0"></script>
+<script src="/js/src/post-details.js?v=6.7.0"></script>
+
+
+
+  
+
+
+  <script src="/js/src/bootstrap.js?v=6.7.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
